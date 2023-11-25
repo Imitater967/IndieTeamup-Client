@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Dsadsaemo',
+      title: 'Indie Team Up Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demaso Hosadsdme Page'),
+      home: const MyHomePage(title: '团队简介'),
     );
   }
 }
@@ -78,13 +79,31 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        leading:  IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.arrow_back),
+        ),
+        centerTitle: true,
         title: Text(widget.title),
+        actions: <Widget>[
+          SpeedDial(
+            icon: Icons.menu,
+            activeIcon: Icons.menu_open,
+            elevation: 4.0,
+            buttonSize: const Size(44, 44),
+            overlayColor: Colors.black,
+            direction: SpeedDialDirection.down,
+            children: [
+              SpeedDialChild(
+                child: Text("加关注"),
+                backgroundColor: Colors.orange[300],
+                foregroundColor: Colors.white,
+              ),
+              SpeedDialChild(child: Text("举报")),
+            ],
+          )
+        ],
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
