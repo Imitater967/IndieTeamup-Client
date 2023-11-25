@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:indie_team_up/widget/widget_avatar.dart';
+import 'package:indie_team_up/widget/widget_project_description.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Indie Team Up Demo',
-      theme: ThemeData(
-          colorScheme: ColorScheme.highContrastLight()
-      ),
+      theme: ThemeData(colorScheme: ColorScheme.highContrastLight()),
       home: const MyHomePage(title: '团队简介'),
     );
   }
@@ -56,9 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var textTheme = Theme
-        .of(context)
-        .textTheme;
+    var textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
         appBar: AppBar(
@@ -81,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 childMargin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 childPadding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 spacing: 0,
+                animationAngle: 90,
                 activeIcon: Icons.menu_open,
                 buttonSize: const Size(80, 60),
                 overlayColor: Colors.white10,
@@ -105,19 +104,36 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image.asset("assets/art/job/icon_job_game.png"),
-                        SizedBox(width: 20,),
-                        Text("梦幻天弘工作室", style: textTheme.titleLarge,),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "梦幻天弘工作室",
+                          style: textTheme.titleLarge,
+                        ),
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0), child:
-                    ,),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text("未知领域"),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text("RPG | 卡牌 | 肉鸽 ")
+                      ],
+                    ),
+                  ),
+                  WProjectDescription(),
+
                 ],
               )
             ],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        );
   }
 }
