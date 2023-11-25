@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:indie_team_up/widget/widget_avatar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,67 +79,45 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        leading:  IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
-        ),
-        centerTitle: true,
-        title: Text(widget.title),
-        actions: <Widget>[
-          SpeedDial(
-            icon: Icons.menu,
-            activeIcon: Icons.menu_open,
-            elevation: 4.0,
-            buttonSize: const Size(44, 44),
-            overlayColor: Colors.black,
-            direction: SpeedDialDirection.down,
-            children: [
-              SpeedDialChild(
-                child: Text("加关注"),
-                backgroundColor: Colors.orange[300],
-                foregroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          leading: IconButton(
+              onPressed: () {},
+              icon: Image.asset("assets/art/app_bar/icon_appbar_exit.png")),
+          centerTitle: true,
+          title: Text(widget.title),
+          actions: <Widget>[
+            Container(
+              child: SpeedDial(
+                backgroundColor: Colors.white,
+                icon: Icons.menu,
+                shape: Border(),
+                spaceBetweenChildren: 0,
+                renderOverlay: false,
+                childrenButtonSize: Size(80,20),
+                overlayOpacity: 0,
+                childMargin: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                childPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 0),
+                spacing: 0,
+                activeIcon: Icons.menu_open,
+                buttonSize: const Size(80, 60),
+                overlayColor: Colors.white10,
+                direction: SpeedDialDirection.down,
+                children: [
+                  SpeedDialChild(child: Text("加关注"), shape: const Border()),
+                  SpeedDialChild(child: Text("举报"), shape: const Border()),
+                ],
               ),
-              SpeedDialChild(child: Text("举报")),
-            ],
-          )
-        ],
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this 2112many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Inc2112rement',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        body: Center(
+          child: Column(
+            children: [
+              WAvatar(),
+            ],
+          ),
+        ) // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
