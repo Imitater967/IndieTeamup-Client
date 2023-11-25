@@ -15,23 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Indie Team Up Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+          colorScheme: ColorScheme.highContrastLight()
       ),
       home: const MyHomePage(title: '团队简介'),
     );
@@ -72,12 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    var textTheme = Theme
+        .of(context)
+        .textTheme;
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -94,10 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: Border(),
                 spaceBetweenChildren: 0,
                 renderOverlay: false,
-                childrenButtonSize: Size(80,20),
+                childrenButtonSize: Size(50, 20),
                 overlayOpacity: 0,
-                childMargin: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                childPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 0),
+                childMargin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                childPadding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 spacing: 0,
                 activeIcon: Icons.menu_open,
                 buttonSize: const Size(80, 60),
@@ -114,10 +96,28 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: Column(
             children: [
-              WAvatar(),
+              Column(
+                children: [
+                  WAvatar(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset("assets/art/job/icon_job_game.png"),
+                        SizedBox(width: 20,),
+                        Text("梦幻天弘工作室", style: textTheme.titleLarge,),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0), child:
+                    ,),
+                ],
+              )
             ],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
-        );
+    );
   }
 }
