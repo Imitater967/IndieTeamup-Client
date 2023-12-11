@@ -38,6 +38,7 @@ dependencies:
   flutter_speed_dial: ^7.0.0
   flutter_markdown: ^0.6.18+2
   hexcolor: ^3.0.1
+  intl_phone_number_input: ^0.7.3+1
 
 dev_dependencies:
   flutter_test:
