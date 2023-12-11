@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:indie_team_up/widget/page/page_LoginByCode.dart';
 import 'package:indie_team_up/widget/page/page_LoginByPwd.dart';
 import 'package:indie_team_up/widget/widget_avatar.dart';
 import 'package:indie_team_up/widget/widget_project_description.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         },
         routes: {
           '/loginByPwd': (context) => LoginByPwd(),
+          '/loginByCode': (context) => LoginByCode(),
         });
   }
 }
