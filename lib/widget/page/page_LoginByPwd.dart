@@ -25,7 +25,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
       child: Container(
         color: Colors.white,
         child: Container(
-          margin: EdgeInsets.fromLTRB(43, 90, 18, 0),
+          margin: const EdgeInsets.fromLTRB(43, 90, 18, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -46,7 +46,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(0, 60, 42, 0),
+                margin: const EdgeInsets.fromLTRB(0, 60, 42, 0),
                 child: Column(
                   children: [
                     InternationalPhoneNumberInput(
@@ -92,7 +92,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
                       onPressed: () {},
                       iconSize: 68,
                       icon: Image.asset("assets/art/login/wechat@3x.png")),
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                   ),
                   IconButton(
