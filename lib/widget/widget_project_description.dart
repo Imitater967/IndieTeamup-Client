@@ -54,7 +54,7 @@ class _FProjectDescriptionState extends State<WProjectDescription> {
             ),
             Text(
               description,
-              maxLines: 5,
+              maxLines: 30,
               overflow: TextOverflow.ellipsis,
             ),
           ],
