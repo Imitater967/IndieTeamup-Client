@@ -15,7 +15,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
   @override
   Widget build(BuildContext context) {
     PhoneNumber phoneNumber = PhoneNumber(isoCode: "CN");
-    SelectorConfig selectorConfig = SelectorConfig(
+    SelectorConfig selectorConfig = const SelectorConfig(
       showFlags: false,
       setSelectorButtonAsPrefixIcon: true,
       leadingPadding: 0,
@@ -61,6 +61,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
                         Expanded(
                           child: TextField(
                             decoration: InputDecoration(hintText: "输入密码"),
+                            obscureText: true,
                           ),
                         ),
                       ],
@@ -73,7 +74,33 @@ class _LoginByPwdState extends State<LoginByPwd> {
                   child: ElevatedButton(
                       style: Constants.mainButtonStyleB,
                       onPressed: () {},
-                      child: Text("登录",style: Constants.mainButtonTextStyleB,)))
+                      child: Text(
+                        "登录",
+                        style: Constants.mainButtonTextStyleB,
+                      ))),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 190, 0, 0),
+                child: Text("其他登录方式",
+                    style: Constants.greyTextStyle.copyWith(fontSize: 16)),
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                width: 300,
+                height: 200,
+                child: Row(children: [
+                  IconButton(
+                      onPressed: () {},
+                      iconSize: 68,
+                      icon: Image.asset("assets/art/login/wechat@3x.png")),
+                  SizedBox(
+                    width: 100,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      iconSize: 68,
+                      icon: Image.asset("assets/art/login/alipay@3x.png")),
+                ]),
+              )
             ],
           ),
         ),
