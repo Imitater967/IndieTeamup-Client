@@ -25,46 +25,52 @@ class _LoginByPwdState extends State<LoginByPwd> {
       child: Container(
         color: Colors.white,
         child: Container(
-          margin: const EdgeInsets.fromLTRB(43, 90, 18, 0),
           child: Column(
-            mainAxisSize: MainAxisSize.max,
             children: [
-              Align(
-                  alignment: Alignment.topRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "验证码登录",
-                      style: Constants.greyTextStyle,
-                    ),
-                  )),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "密码登录",
-                  style: Constants.titleTextStyle.copyWith(fontSize: 30),
-                ),
-              ),
               Container(
-                margin: const EdgeInsets.fromLTRB(0, 60, 42, 0),
+                margin: const EdgeInsets.fromLTRB(43, 90, 18, 0),
                 child: Column(
+                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    InternationalPhoneNumberInput(
-                      onInputChanged: (number) {},
-                      initialValue: phoneNumber,
-                      spaceBetweenSelectorAndTextField: 1,
-                      selectorConfig: selectorConfig,
-                      hintText: "请输入手机号码",
-                    ),
-                    const Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(hintText: "输入密码"),
-                            obscureText: true,
+                    Align(
+                        alignment: Alignment.topRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "验证码登录",
+                            style: Constants.greyTextStyle,
                           ),
-                        ),
-                      ],
+                        )),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "密码登录",
+                        style: Constants.titleTextStyle.copyWith(fontSize: 30),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(0, 60, 42, 0),
+                      child: Column(
+                        children: [
+                          InternationalPhoneNumberInput(
+                            onInputChanged: (number) {},
+                            initialValue: phoneNumber,
+                            spaceBetweenSelectorAndTextField: 1,
+                            selectorConfig: selectorConfig,
+                            hintText: "请输入手机号码",
+                          ),
+                          const Row(
+                            children: [
+                              Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(hintText: "输入密码"),
+                                  obscureText: true,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -79,27 +85,29 @@ class _LoginByPwdState extends State<LoginByPwd> {
                         style: Constants.mainButtonTextStyleB,
                       ))),
               Container(
-                padding: EdgeInsets.fromLTRB(0, 190, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
                 child: Text("其他登录方式",
                     style: Constants.greyTextStyle.copyWith(fontSize: 16)),
               ),
               Container(
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 width: 300,
-                height: 200,
-                child: Row(children: [
-                  IconButton(
-                      onPressed: () {},
-                      iconSize: 68,
-                      icon: Image.asset("assets/art/login/wechat@3x.png")),
-                  const SizedBox(
-                    width: 100,
-                  ),
-                  IconButton(
-                      onPressed: () {},
-                      iconSize: 68,
-                      icon: Image.asset("assets/art/login/alipay@3x.png")),
-                ]),
+                height: 100,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          iconSize: 68,
+                          icon: Image.asset("assets/art/login/wechat@3x.png")),
+                      const SizedBox(
+                        width: 70,
+                      ),
+                      IconButton(
+                          onPressed: () {},
+                          iconSize: 68,
+                          icon: Image.asset("assets/art/login/AliPay@3x.png")),
+                    ]),
               )
             ],
           ),
