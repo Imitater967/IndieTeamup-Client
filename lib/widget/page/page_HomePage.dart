@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 import '../Constants.dart';
 
@@ -22,10 +21,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
 
@@ -64,7 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 36, 0, 0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/regByCode');
+                },
                 style: Constants.mainButtonStyleA,
                 child: Text("注册", style: Constants.mainButtonTextStyleA),
               ),
