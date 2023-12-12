@@ -8,7 +8,18 @@ class Constants{
   static var mainButtonTextStyleB = const TextStyle(color: Colors.white,fontSize: 24, fontWeight: FontWeight.bold);
   static var mainButtonStyleB = ButtonStyle(
     minimumSize: MaterialStateProperty.all(const Size(264, 48)),
-    backgroundColor: MaterialStateProperty.all(Constants.mainColor),
+    // backgroundColor: MaterialStateProperty.all(Constants.mainColor),
+         backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+           (Set<MaterialState> states) {
+             if (states.contains(MaterialState.pressed)) {
+               return Colors.white;
+             }
+             if(states.contains(MaterialState.disabled)){
+               return HexColor("#D9D9D9");
+             }
+             return null; // Use the component's default.
+           },
+         ),
     shape: MaterialStateProperty.all(
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
   );

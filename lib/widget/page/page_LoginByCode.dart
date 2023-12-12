@@ -1,4 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import '../widget_login_phone_field.dart';
 
 class LoginByCode extends StatefulWidget{
   @override
@@ -22,7 +25,18 @@ class _LoginByCodeState extends State<LoginByCode>{
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Material(
+      child: Container(
+        color: Colors.white,
+        child: Column(
+          children: [
+            WLoginPhoneField(
+              title: "手机号登录",subTitle: "密码登录", onSubTitleClick: (){Navigator.pop(context);},
+            )
+          ],
+        ),
+      ),
+    );
   }
 
 }

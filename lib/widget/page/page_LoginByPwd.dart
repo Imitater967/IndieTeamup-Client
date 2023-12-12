@@ -19,58 +19,60 @@ class _LoginByPwdState extends State<LoginByPwd> {
     return Material(
       child: Container(
         color: Colors.white,
-        child: Container(
-          child: Column(
-            children: [
-              WLoginPhoneField(
-                children: const [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(hintText: "输入密码"),
-                          obscureText: true,
-                        ),
+        child: Column(
+          children: [
+            WLoginPhoneField(
+              title: "密码登录",
+              onSubTitleClick: (){
+                Navigator.pushNamed(context, "/loginByCode");
+              },
+              children: const [
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(hintText: "输入密码"),
+                        obscureText: true,
                       ),
-                    ],
-                  ),],
-              ),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-                  child: ElevatedButton(
-                      style: Constants.mainButtonStyleB,
-                      onPressed: () {},
-                      child: Text(
-                        "登录",
-                        style: Constants.mainButtonTextStyleB,
-                      ))),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
-                child: Text("其他登录方式",
-                    style: Constants.greyTextStyle.copyWith(fontSize: 16)),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                width: 300,
-                height: 100,
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                          onPressed: () {},
-                          iconSize: 68,
-                          icon: Image.asset("assets/art/login/wechat@3x.png")),
-                      const SizedBox(
-                        width: 70,
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          iconSize: 68,
-                          icon: Image.asset("assets/art/login/AliPay@3x.png")),
-                    ]),
-              )
-            ],
-          ),
+                    ),
+                  ],
+                ),],
+            ),
+            Container(
+                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                child: ElevatedButton(
+                    style: Constants.mainButtonStyleB,
+                    onPressed: () {},
+                    child: Text(
+                      "登录",
+                      style: Constants.mainButtonTextStyleB,
+                    ))),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 130, 0, 0),
+              child: Text("其他登录方式",
+                  style: Constants.greyTextStyle.copyWith(fontSize: 16)),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              width: 300,
+              height: 100,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        iconSize: 68,
+                        icon: Image.asset("assets/art/login/wechat@3x.png")),
+                    const SizedBox(
+                      width: 70,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        iconSize: 68,
+                        icon: Image.asset("assets/art/login/AliPay@3x.png")),
+                  ]),
+            )
+          ],
         ),
       ),
     );
