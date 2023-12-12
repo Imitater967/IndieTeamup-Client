@@ -15,7 +15,6 @@ class LoginByPwd extends StatefulWidget {
 class _LoginByPwdState extends State<LoginByPwd> {
   @override
   Widget build(BuildContext context) {
-
     return Material(
       child: Container(
         color: Colors.white,
@@ -23,7 +22,7 @@ class _LoginByPwdState extends State<LoginByPwd> {
           children: [
             WLoginPhoneField(
               title: "密码登录",
-              onSubTitleClick: (){
+              onSubTitleClick: () {
                 Navigator.pushNamed(context, "/loginByCode");
               },
               children: const [
@@ -36,12 +35,15 @@ class _LoginByPwdState extends State<LoginByPwd> {
                       ),
                     ),
                   ],
-                ),],
+                ),
+              ],
             ),
             Container(
                 padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
                 child: ElevatedButton(
-                    style: Constants.mainButtonStyleB,
+                    style: Constants.mainButtonStyleB.copyWith(
+                        minimumSize:
+                            MaterialStateProperty.all(const Size(290, 48))),
                     onPressed: () {},
                     child: Text(
                       "登录",
@@ -56,21 +58,20 @@ class _LoginByPwdState extends State<LoginByPwd> {
               padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
               width: 300,
               height: 100,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                        onPressed: () {},
-                        iconSize: 68,
-                        icon: Image.asset("assets/art/login/wechat@3x.png")),
-                    const SizedBox(
-                      width: 70,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        iconSize: 68,
-                        icon: Image.asset("assets/art/login/AliPay@3x.png")),
-                  ]),
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                IconButton(
+                    onPressed: () {},
+                    iconSize: 68,
+                    icon: Image.asset("assets/art/login/wechat@3x.png")),
+                const SizedBox(
+                  width: 70,
+                ),
+                IconButton(
+                    onPressed: () {},
+                    iconSize: 68,
+                    icon: Image.asset("assets/art/login/AliPay@3x.png")),
+              ]),
             )
           ],
         ),

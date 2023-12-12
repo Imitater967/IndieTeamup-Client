@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Constants.dart';
 import '../widget_login_phone_field.dart';
 
 class LoginByCode extends StatefulWidget{
@@ -32,7 +35,9 @@ class _LoginByCodeState extends State<LoginByCode>{
           children: [
             WLoginPhoneField(
               title: "手机号登录",subTitle: "密码登录", onSubTitleClick: (){Navigator.pop(context);},
-            )
+            ),
+            Container(margin: EdgeInsets.fromLTRB(0, 160, 0, 0),
+            child: ElevatedButton(style: Constants.mainButtonStyleB,onPressed: null, child: Text("获取验证码",style: Constants.mainButtonTextStyleB,),),)
           ],
         ),
       ),
