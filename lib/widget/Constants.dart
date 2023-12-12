@@ -13,9 +13,6 @@ class Constants{
         if(states.contains(MaterialState.disabled)){
           return HexColor("#D9D9D9");
         }
-        if (states.contains(MaterialState.pressed)) {
-          return Colors.white;
-        }
         return mainColor; // Use the component's default.
      },
    ),
