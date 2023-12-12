@@ -52,7 +52,7 @@ class _WLoginPhoneFieldState extends State<WLoginPhoneField> {
     );
 
     return Container(
-      margin: const EdgeInsets.fromLTRB(16, 10, 18, 0),
+      margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -82,7 +82,7 @@ class _WLoginPhoneFieldState extends State<WLoginPhoneField> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.fromLTRB(0, 60, 42, 0),
+            margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
             child: Column(
               children: [
                 InternationalPhoneNumberInput(
