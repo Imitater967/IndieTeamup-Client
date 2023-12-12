@@ -28,49 +28,51 @@ class _MyHomePageState extends State<MyHomePage> {
 
     double marign = 241;
 
-    return Container(
-      color: Constants.mainColor,
-      child: Center(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0, marign, 0, 0),
-              child: const Center(
-                child: Text(
-                  'IndieTeamUp',
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontFamily: "alegreya-sans",
-                    color: Colors.white,
+    return SafeArea(
+      child: Container(
+        color: Constants.mainColor,
+        child: Center(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(0, marign, 0, 0),
+                child: const Center(
+                  child: Text(
+                    'IndieTeamUp',
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontFamily: "alegreya-sans",
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 246, 0, 0),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/loginByPwd');
-                },
-                style: Constants.mainButtonStyleA,
-                child: Text("登录", style: Constants.mainButtonTextStyleA),
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 246, 0, 0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/loginByPwd');
+                  },
+                  style: Constants.mainButtonStyleA,
+                  child: Text("登录", style: Constants.mainButtonTextStyleA),
+                ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 36, 0, 0),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/regByCode');
-                },
-                style: Constants.mainButtonStyleA,
-                child: Text("注册", style: Constants.mainButtonTextStyleA),
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 36, 0, 0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/regByCode');
+                  },
+                  style: Constants.mainButtonStyleA,
+                  child: Text("注册", style: Constants.mainButtonTextStyleA),
+                ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 78, 0, 0),
-              child: TextButton(child: Text("登录时候遇到问题?",style: tipTextStyle,),onPressed: (){},),
-            )
-          ],
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 78, 0, 0),
+                child: TextButton(child: Text("登录时候遇到问题?",style: tipTextStyle,),onPressed: (){},),
+              )
+            ],
+          ),
         ),
       ),
     );

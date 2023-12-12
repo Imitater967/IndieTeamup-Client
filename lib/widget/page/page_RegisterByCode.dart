@@ -14,33 +14,35 @@ class RegisterByCode extends StatefulWidget {
 class _RegisterByCodeState extends State<RegisterByCode> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: Container(
-      color: Colors.white,
-      child: Column(
-        children: [
-          WLoginPhoneField(
-            title: "手机号注册",
-            subTitle: "登录",
-            onSubTitleClick: () {
-              Navigator.pushNamed(context, "/loginByCode");
-            },
-          ),
-          Container(
-            margin: const EdgeInsets.fromLTRB(0, 160, 0, 0),
-            child: ElevatedButton(
-              style: Constants.mainButtonStyleB,
-              onPressed: (){
-                Navigator.pushNamed(context, "/enterCode");
+    return SafeArea(
+      child: Material(
+          child: Container(
+        color: Colors.white,
+        child: Column(
+          children: [
+            WLoginPhoneField(
+              title: "手机号注册",
+              subTitle: "登录",
+              onSubTitleClick: () {
+                Navigator.pushNamed(context, "/loginByCode");
               },
-              child: Text(
-                "获取验证码",
-                style: Constants.mainButtonTextStyleB,
-              ),
             ),
-          )
-        ],
-      ),
-    ));
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 160, 0, 0),
+              child: ElevatedButton(
+                style: Constants.mainButtonStyleB,
+                onPressed: (){
+                  Navigator.pushNamed(context, "/enterCode");
+                },
+                child: Text(
+                  "获取验证码",
+                  style: Constants.mainButtonTextStyleB,
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
   }
 }

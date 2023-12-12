@@ -28,17 +28,19 @@ class _LoginByCodeState extends State<LoginByCode>{
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            WLoginPhoneField(
-              title: "手机号登录",subTitle: "密码登录", onSubTitleClick: (){Navigator.pop(context);},
-            ),
-            Container(margin: EdgeInsets.fromLTRB(0, 160, 0, 0),
-            child: ElevatedButton(style: Constants.mainButtonStyleB,onPressed: null, child: Text("获取验证码",style: Constants.mainButtonTextStyleB,),),)
-          ],
+    return SafeArea(
+      child: Material(
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            children: [
+              WLoginPhoneField(
+                title: "手机号登录",subTitle: "密码登录", onSubTitleClick: (){Navigator.pop(context);},
+              ),
+              Container(margin: EdgeInsets.fromLTRB(0, 160, 0, 0),
+              child: ElevatedButton(style: Constants.mainButtonStyleB,onPressed: null, child: Text("获取验证码",style: Constants.mainButtonTextStyleB,),),)
+            ],
+          ),
         ),
       ),
     );
