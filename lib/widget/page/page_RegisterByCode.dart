@@ -30,7 +30,9 @@ class _RegisterByCodeState extends State<RegisterByCode> {
             margin: const EdgeInsets.fromLTRB(0, 160, 0, 0),
             child: ElevatedButton(
               style: Constants.mainButtonStyleB,
-              onPressed: null,
+              onPressed: (){
+                Navigator.pushNamed(context, "/enterCode");
+              },
               child: Text(
                 "获取验证码",
                 style: Constants.mainButtonTextStyleB,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:indie_team_up/widget/page/page_EnterCode.dart';
 import 'package:indie_team_up/widget/page/page_LoginByCode.dart';
 import 'package:indie_team_up/widget/page/page_LoginByPwd.dart';
 import 'package:indie_team_up/widget/page/page_RegisterByCode.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           '/loginByPwd': (context) => LoginByPwd(),
           '/loginByCode': (context) => LoginByCode(),
           '/regByCode' : (context) => RegisterByCode(),
+          '/enterCode' : (context) => EnterCode(),
         });
   }
 }
