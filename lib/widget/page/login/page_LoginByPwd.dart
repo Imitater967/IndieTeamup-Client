@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:indie_team_up/widget/Constants.dart';
 import 'package:indie_team_up/widget/widget_login_phone_field.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-
-import '../Constants.dart';
 
 class LoginByPwd extends StatefulWidget {
   @override
@@ -45,7 +43,9 @@ class _LoginByPwdState extends State<LoginByPwd> {
                       style: Constants.mainButtonStyleB.copyWith(
                           minimumSize:
                               MaterialStateProperty.all(const Size(290, 48))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/welcome/idSelector');
+                      },
                       child: Text(
                         "登录",
                         style: Constants.mainButtonTextStyleB,

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:indie_team_up/widget/page/page_EnterCode.dart';
-import 'package:indie_team_up/widget/page/page_LoginByCode.dart';
-import 'package:indie_team_up/widget/page/page_LoginByPwd.dart';
-import 'package:indie_team_up/widget/page/page_RegisterByCode.dart';
+import 'package:indie_team_up/widget/page/login/page_EnterCode.dart';
+import 'package:indie_team_up/widget/page/login/page_LoginByCode.dart';
+import 'package:indie_team_up/widget/page/login/page_LoginByPwd.dart';
+import 'package:indie_team_up/widget/page/login/page_RegisterByCode.dart';
+import 'package:indie_team_up/widget/page/welcome/page_IdentitySelector.dart';
+import 'package:indie_team_up/widget/page/welcome/page_WorkerIdentity.dart';
 import 'widget/page/page_HomePage.dart';
 
 void main() {
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
           '/loginByCode': (context) => LoginByCode(),
           '/regByCode' : (context) => RegisterByCode(),
           '/enterCode' : (context) => EnterCode(),
+          '/welcome/idSelector' : (context) => IdentitySelector(),
+          '/welcome/workerIdentity' : (context) => WorkerIdentity(),
         });
   }
 }

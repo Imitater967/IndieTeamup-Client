@@ -1,10 +1,9 @@
-import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../Constants.dart';
-import '../widget_login_phone_field.dart';
+import '../../Constants.dart';
+import '../../widget_login_phone_field.dart';
 
 class LoginByCode extends StatefulWidget{
   @override
