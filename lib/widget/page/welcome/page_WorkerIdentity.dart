@@ -16,6 +16,12 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
     var itemUnderlineBorder = const UnderlineInputBorder(
         borderSide:
             BorderSide(color: Colors.grey, width: 2, style: BorderStyle.solid));
+    var underline = Container(
+      color: Colors.grey,
+      height: 2,
+      width: double.infinity,
+      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+    );
     return SafeArea(
         child: Material(
       child: Container(
@@ -52,12 +58,7 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                           ),
                         ],
                       ),
-                      Container(
-                        color: Colors.grey,
-                        height: 2,
-                        width: double.infinity,
-                        margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      )
+                      underline,
                     ],
                   )),
               Container(
@@ -83,6 +84,35 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                             enabledBorder: itemUnderlineBorder,
                             hintText: "林希"),
                       )
+                    ],
+                  )),
+              Container(
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  height: 102,
+                  width: double.infinity,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "出生年月",
+                            style: Constants.resumeItemTitleTextStyle,
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
+                          Text("1995-08"),
+                          Spacer(),
+                          Image.asset("assets/art/welcome/GreaterSign.png")
+                        ],
+                      ),
+                      underline,
                     ],
                   ))
             ],
