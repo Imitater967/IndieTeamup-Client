@@ -102,6 +102,7 @@ class TeamMemberIdentity extends StatelessWidget{
                               )
                             ],
                           )),
+                      ResumeItemDataPicker("所在城市", "福建 福州"),
                     ],
                   ),
                 ),

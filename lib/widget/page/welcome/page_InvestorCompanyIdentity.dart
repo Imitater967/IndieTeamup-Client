@@ -5,7 +5,8 @@ import 'package:indie_team_up/widget/page/welcome/widget_welcome_resume_head.dar
 
 import '../../Constants.dart';
 
-class InvestorManagerIdentity extends StatelessWidget{
+//这个很明显是statefulwidget, 比如 死亡细胞和梦幻西游
+class InvestorCompanyIdentity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,7 +18,7 @@ class InvestorManagerIdentity extends StatelessWidget{
                 Container(
                   margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
                   child: WelcomeResumeHead(
-                    "创建投资人名片",
+                    "资方简介",
                     "向团队介绍一下自己吧",
                     children: [
                       Container(
@@ -60,7 +61,7 @@ class InvestorManagerIdentity extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "姓名",
+                                    "公司名称",
                                     style: Constants.resumeItemTitleTextStyle,
                                     textAlign: TextAlign.center,
                                   ),
@@ -70,11 +71,10 @@ class InvestorManagerIdentity extends StatelessWidget{
                                 decoration: InputDecoration(
                                     focusedBorder: Constants.itemUnderlineBorder,
                                     enabledBorder: Constants.itemUnderlineBorder,
-                                    hintText: "林希"),
+                                    hintText: "IndieTeamUp"),
                               )
                             ],
                           )),
-                      ResumeItemDataPicker("我的公司", "IndieTeamUp"),
                       Container(
                           margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           height: 102,
@@ -86,17 +86,26 @@ class InvestorManagerIdentity extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "我的职位",
+                                    "已投项目",
                                     style: Constants.resumeItemTitleTextStyle,
                                     textAlign: TextAlign.center,
                                   ),
+                                  Spacer(),
+                                  IconButton(onPressed: (){}, icon: Image.asset("assets/art/welcome/PlusSign.png")),
                                 ],
+                              ),
+                              //这里是一个List
+                              TextField(
+                                decoration: InputDecoration(
+                                    focusedBorder: Constants.itemUnderlineBorder,
+                                    enabledBorder: Constants.itemUnderlineBorder,
+                                    hintText: "死亡细胞"),
                               ),
                               TextField(
                                 decoration: InputDecoration(
                                     focusedBorder: Constants.itemUnderlineBorder,
                                     enabledBorder: Constants.itemUnderlineBorder,
-                                    hintText: "投资经理"),
+                                    hintText: "梦幻西游"),
                               )
                             ],
                           )),

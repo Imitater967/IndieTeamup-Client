@@ -6,6 +6,7 @@ import 'package:indie_team_up/widget/page/login/page_LoginByPwd.dart';
 import 'package:indie_team_up/widget/page/login/page_RegisterByCode.dart';
 import 'package:indie_team_up/widget/page/welcome/page_IdentitySelector.dart';
 import 'package:indie_team_up/widget/page/welcome/page_InvestorCompanyIdentity.dart';
+import 'package:indie_team_up/widget/page/welcome/page_InvestorManagerIdentity.dart';
 import 'package:indie_team_up/widget/page/welcome/page_TeamMemberIdentity.dart';
 import 'package:indie_team_up/widget/page/welcome/page_WorkerIdentity.dart';
 import 'widget/page/page_HomePage.dart';
@@ -41,7 +42,9 @@ class MyApp extends StatelessWidget {
           '/welcome/idSelector' : (context) => IdentitySelector(),
           '/welcome/workerIdentity' : (context) => WorkerIdentity(),
           '/welcome/teamMemberIdentity' : (context) => TeamMemberIdentity(),
-          '/welcome/investorManagerIdentity' : (context) =>InvestorManagerIdentity(),
+          // '/welcome/teamProfileIdentity' : (context) => (),
+          '/welcome/investorManagerIdentity' : (context) => InvestorManagerIdentity(),
+          '/welcome/investorCompanyIdentity' : (context) => InvestorCompanyIdentity(),
         });
   }
 }
