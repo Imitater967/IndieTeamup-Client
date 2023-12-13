@@ -26,4 +26,7 @@ class Constants{
     shape: MaterialStateProperty.all(
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
   );
+
+  static var resumeItemTitleTextStyle = TextStyle(color: HexColor("#6C6C6C"),fontSize: 14);
+  static var resumeItemTextStyle = TextStyle(color: HexColor("#2C2C2C"),fontSize: 20);
 }

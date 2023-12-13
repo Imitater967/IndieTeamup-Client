@@ -57,7 +57,7 @@ class _WelcomeResumeHeadState extends State<WelcomeResumeHead> {
                 style: Constants.greyTextStyle,
                 textAlign: TextAlign.left,
               ),
-              ...children
+              ...children,
             ],
           ),
         )
