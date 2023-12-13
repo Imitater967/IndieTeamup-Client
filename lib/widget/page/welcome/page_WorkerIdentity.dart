@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:indie_team_up/widget/Constants.dart';
+import 'package:indie_team_up/widget/page/welcome/widget_resume_item_data_picker.dart';
 import 'package:indie_team_up/widget/page/welcome/widget_welcome_resume_head.dart';
 
 class WorkerIdentity extends StatefulWidget {
@@ -111,74 +112,7 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                       )),
                 ),
               ),
-              Material(
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      height: 102,
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "我会的技能",
-                                style: Constants.resumeItemTitleTextStyle,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
-                              Text("UI设计、产品策划"),
-                              Spacer(),
-                              Image.asset("assets/art/welcome/GreaterSign.png")
-                            ],
-                          ),
-                          Constants.underline,
-                        ],
-                      )),
-                ),
-              ),
-              Material(
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      height: 102,
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "期望地点",
-                                style: Constants.resumeItemTitleTextStyle,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
-                              Text("福州/厦门/杭州"),
-                              Spacer(),
-                              Image.asset("assets/art/welcome/GreaterSign.png")
-                            ],
-                          ),
-                          Constants.underline,
-                        ],
-                      )),
-                ),
-              ),
+              ResumeItemDataPicker("我会的技能", "UI设计、产品策划"),
             ],
           ),
         ),

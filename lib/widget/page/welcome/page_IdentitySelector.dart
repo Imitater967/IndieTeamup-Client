@@ -36,7 +36,7 @@ class _SelectBox extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       width: 280,
-      height: 143,
+      height: 150,
       margin: const EdgeInsets.fromLTRB(0, 0, 0, 73),
       decoration: const BoxDecoration(color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(10)),
