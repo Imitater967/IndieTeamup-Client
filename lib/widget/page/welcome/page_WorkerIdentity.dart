@@ -13,15 +13,6 @@ class WorkerIdentity extends StatefulWidget {
 class _WorkerIdentityState extends State<WorkerIdentity> {
   @override
   Widget build(BuildContext context) {
-    var itemUnderlineBorder = const UnderlineInputBorder(
-        borderSide:
-            BorderSide(color: Colors.grey, width: 2, style: BorderStyle.solid));
-    var underline = Container(
-      color: Colors.grey,
-      height: 2,
-      width: double.infinity,
-      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-    );
     return SafeArea(
         child: Material(
       child: Container(
@@ -58,7 +49,7 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                           ),
                         ],
                       ),
-                      underline,
+                      Constants.underline,
                     ],
                   )),
               Container(
@@ -80,41 +71,114 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            focusedBorder: itemUnderlineBorder,
-                            enabledBorder: itemUnderlineBorder,
+                            focusedBorder: Constants.itemUnderlineBorder,
+                            enabledBorder: Constants.itemUnderlineBorder,
                             hintText: "林希"),
                       )
                     ],
                   )),
-              Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  height: 102,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+              Material(
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                      height: 102,
+                      width: double.infinity,
+                      child: Column(
                         children: [
-                          Text(
-                            "出生年月",
-                            style: Constants.resumeItemTitleTextStyle,
-                            textAlign: TextAlign.center,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "出生年月",
+                                style: Constants.resumeItemTitleTextStyle,
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
+                              Text("1995-08"),
+                              Spacer(),
+                              Image.asset("assets/art/welcome/GreaterSign.png")
+                            ],
+                          ),
+                          Constants.underline,
                         ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
+                      )),
+                ),
+              ),
+              Material(
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                      height: 102,
+                      width: double.infinity,
+                      child: Column(
                         children: [
-                          //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
-                          Text("1995-08"),
-                          Spacer(),
-                          Image.asset("assets/art/welcome/GreaterSign.png")
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "我会的技能",
+                                style: Constants.resumeItemTitleTextStyle,
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
+                              Text("UI设计、产品策划"),
+                              Spacer(),
+                              Image.asset("assets/art/welcome/GreaterSign.png")
+                            ],
+                          ),
+                          Constants.underline,
                         ],
-                      ),
-                      underline,
-                    ],
-                  ))
+                      )),
+                ),
+              ),
+              Material(
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                      height: 102,
+                      width: double.infinity,
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "期望地点",
+                                style: Constants.resumeItemTitleTextStyle,
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              //https://pub.dev/packages/flutter_pickers#%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8
+                              Text("福州/厦门/杭州"),
+                              Spacer(),
+                              Image.asset("assets/art/welcome/GreaterSign.png")
+                            ],
+                          ),
+                          Constants.underline,
+                        ],
+                      )),
+                ),
+              ),
             ],
           ),
         ),

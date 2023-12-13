@@ -29,4 +29,14 @@ class Constants{
 
   static var resumeItemTitleTextStyle = TextStyle(color: HexColor("#6C6C6C"),fontSize: 14);
   static var resumeItemTextStyle = TextStyle(color: HexColor("#2C2C2C"),fontSize: 20);
+
+  static var itemUnderlineBorder = const UnderlineInputBorder(
+      borderSide:
+      BorderSide(color: Colors.grey, width: 2, style: BorderStyle.solid));
+  static var underline = Container(
+    color: Colors.grey,
+    height: 2,
+    width: double.infinity,
+    margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  );
 }
