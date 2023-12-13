@@ -37,8 +37,10 @@ class _SelectBox extends StatelessWidget{
     return Container(
       width: 280,
       height: 143,
-      margin: EdgeInsets.fromLTRB(0, 0, 0, 73),
-      color: Colors.white,
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 73),
+      decoration: const BoxDecoration(color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
       child: TextButton(
         onPressed: onPressed,
         child: Column(
