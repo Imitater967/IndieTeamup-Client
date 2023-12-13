@@ -16,8 +16,12 @@ class IdentitySelector extends StatelessWidget{
                   _SelectBox("我想应聘", "我是\n设计师/程序员/美术...",(){
                     Navigator.pushNamed(context, "/welcome/workerIdentity");
                   }),
-                  _SelectBox("我想招聘、寻投资", "我是团队/项目方",(){}),
-                  _SelectBox("我想投资", "我是投资方",(){}),
+                  _SelectBox("我想招聘、寻投资", "我是团队/项目方",(){
+                    Navigator.pushNamed(context, "/welcome/teamMemberIdentity");
+                  }),
+                  _SelectBox("我想投资", "我是投资方",(){
+                    Navigator.pushNamed(context, "/welcome/investorManagerIdentity");
+                  }),
                 ],
               ),
             ),
