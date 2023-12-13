@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:indie_team_up/widget/page/welcome/widget_resume_item_data_picker.dart';
 import 'package:indie_team_up/widget/page/welcome/widget_welcome_resume_head.dart';
 
 import '../../Constants.dart';
@@ -22,7 +21,7 @@ class InvestorCompanyIdentity extends StatelessWidget{
                     "向团队介绍一下自己吧",
                     children: [
                       Container(
-                          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                           height: 102,
                           width: double.infinity,
                           child: Column(
@@ -76,8 +75,8 @@ class InvestorCompanyIdentity extends StatelessWidget{
                             ],
                           )),
                       Container(
-                          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          height: 102,
+                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          height: 200,
                           width: double.infinity,
                           child: Column(
                             children: [

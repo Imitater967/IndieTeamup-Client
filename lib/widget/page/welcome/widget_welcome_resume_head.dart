@@ -17,9 +17,9 @@ class WelcomeResumeHead extends StatefulWidget {
 }
 
 class _WelcomeResumeHeadState extends State<WelcomeResumeHead> {
-  String title;
-  String subTitle;
-  List<Widget> children;
+  final String title;
+  final String subTitle;
+  final List<Widget> children;
 
   _WelcomeResumeHeadState(
     this.title,
@@ -41,7 +41,7 @@ class _WelcomeResumeHeadState extends State<WelcomeResumeHead> {
           ),
         ),
         Container(
-          margin: EdgeInsets.fromLTRB(40, 46, 40, 43),
+          margin: const EdgeInsets.fromLTRB(40, 0, 40, 0),
           width: double.infinity,
           child: Column(
             mainAxisSize: MainAxisSize.max,

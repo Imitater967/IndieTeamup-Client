@@ -115,6 +115,7 @@ class _WorkerIdentityState extends State<WorkerIdentity> {
                     ),
                   ),
                   ResumeItemDataPicker("我会的技能", "UI设计、产品策划"),
+                  ResumeItemDataPicker("所在城市", "福建 福州"),
                 ],
               ),
             ),

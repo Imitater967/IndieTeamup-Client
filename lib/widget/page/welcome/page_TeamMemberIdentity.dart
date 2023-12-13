@@ -106,7 +106,9 @@ class TeamMemberIdentity extends StatelessWidget{
                     ],
                   ),
                 ),
-                ElevatedButton(onPressed: (){},style: Constants.mainButtonStyleB, child: const Text("下一步"),)
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, "/welcome/teamCompanyIdentity");
+                },style: Constants.mainButtonStyleB, child: const Text("下一步"),)
               ],
             ),
           ),
