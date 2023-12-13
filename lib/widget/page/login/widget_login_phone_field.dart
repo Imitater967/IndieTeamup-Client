@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-import 'Constants.dart';
+import '../../Constants.dart';
 
 class WLoginPhoneField extends StatefulWidget {
   final List<Widget> children;

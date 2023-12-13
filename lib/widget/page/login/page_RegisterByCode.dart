@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:indie_team_up/widget/widget_login_phone_field.dart';
+import 'package:indie_team_up/widget/page/login/widget_login_phone_field.dart';
 
 import '../../Constants.dart';
 
