@@ -28,23 +28,25 @@ class _LobbySubTabBarState extends State<LobbySubTabBar>
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [TabBar(
-        controller: _subController,
-        tabs: [
-          Tab(
-            text: "推荐",
-          ),
-          Tab(
-            text: "附近",
-          ),
-          Tab(
-            text: "最新",
-          ),
-        ],
-        indicator: BoxDecoration(
-            borderRadius: BorderRadius.circular(25), color: Colors.green),
-        labelColor: Colors.white,
-        unselectedLabelColor: Colors.black,
+      children: [Container(
+        color: Colors.grey,
+        child: TabBar(
+          controller: _subController,
+          tabs: [
+            Tab(
+              text: "推荐",
+            ),
+            Tab(
+              text: "附近",
+            ),
+            Tab(
+              text: "最新",
+            ),
+          ],
+          labelColor: Colors.black,
+          labelStyle: TextStyle(fontWeight: FontWeight.bold),
+          unselectedLabelColor: Colors.black45,
+        ),
       ),
       Expanded(child: TabBarView(controller: _subController,children: [LobbyContent(),LobbyContent(),LobbyContent()],)),
 

@@ -34,17 +34,15 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
         children: [
           Container(
             height: 45,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.grey,
-              borderRadius: BorderRadius.circular(25),
             ),
             child: TabBar(
               controller: _parentController,
-              indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25), color: Colors.green),
-              labelColor: Colors.white,
-              unselectedLabelColor: Colors.black,
-              tabs: [
+              labelColor: Colors.black,
+              labelStyle: TextStyle(fontWeight: FontWeight.bold),
+              unselectedLabelColor: Colors.black45,
+              tabs: const [
                 Tab(
                   text: "风险投资",
                 ),
