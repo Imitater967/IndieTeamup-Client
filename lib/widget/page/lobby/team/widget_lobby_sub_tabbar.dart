@@ -33,7 +33,7 @@ class _LobbySubTabBarState extends State<LobbySubTabBar>
         child: Row(
           children: [
             Container(
-              height: 100,
+              height: 30,
               width: 200,
               child: TabBar(
                 controller: _subController,

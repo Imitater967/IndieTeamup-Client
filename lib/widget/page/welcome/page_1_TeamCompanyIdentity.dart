@@ -70,7 +70,7 @@ class TeamCompanyIdentity extends StatelessWidget{
                         decoration: InputDecoration(
                             focusedBorder: Constants.itemUnderlineBorder,
                             enabledBorder: Constants.itemUnderlineBorder,
-                            hintText: "梦幻西游"),
+                            hintText: "梦X西X"),
                       ),
                       ResumeItemDataPicker("在招职位", "无"),
                     ],

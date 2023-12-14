@@ -40,13 +40,14 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
             child: Row(
               children: [
                 Container(
-                  height: 200,
-                  width: 300,
+                  height: 30,
+                  width: 280,
                   child: TabBar(
                     controller: _parentController,
                     labelColor: Colors.black,
                     labelStyle: TextStyle(fontWeight: FontWeight.bold),
                     unselectedLabelColor: Colors.black45,
+                    labelPadding: EdgeInsets.symmetric(horizontal: 1),
                     tabs: const [
                       Tab(
                         text: "风险投资",
@@ -62,7 +63,7 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
                 ),
                 Spacer(),
                 ElevatedButton(onPressed: (){}, child: Text("添加")),
-                SizedBox(width: 20,),
+                SizedBox(width: 10,),
                 ElevatedButton(onPressed: (){}, child: Text("搜索"))
               ],
             ),
