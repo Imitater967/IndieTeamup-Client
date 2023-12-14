@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:indie_team_up/widget/page/lobby/team/page_LobbyTeamOverview.dart';
 import 'package:indie_team_up/widget/page/login/page_EnterCode.dart';
 import 'package:indie_team_up/widget/page/login/page_LoginByCode.dart';
 import 'package:indie_team_up/widget/page/login/page_LoginByPwd.dart';
 import 'package:indie_team_up/widget/page/login/page_RegisterByCode.dart';
 import 'package:indie_team_up/widget/page/welcome/page_IdentitySelector.dart';
-import 'package:indie_team_up/widget/page/welcome/page_InvestorCompanyIdentity.dart';
-import 'package:indie_team_up/widget/page/welcome/page_InvestorManagerIdentity.dart';
-import 'package:indie_team_up/widget/page/welcome/page_TeamCompanyIdentity.dart';
-import 'package:indie_team_up/widget/page/welcome/page_TeamMemberIdentity.dart';
+import 'package:indie_team_up/widget/page/welcome/page_1_InvestorCompanyIdentity.dart';
+import 'package:indie_team_up/widget/page/welcome/page_0_InvestorManagerIdentity.dart';
+import 'package:indie_team_up/widget/page/welcome/page_1_TeamCompanyIdentity.dart';
+import 'package:indie_team_up/widget/page/welcome/page_0_TeamMemberIdentity.dart';
 import 'package:indie_team_up/widget/page/welcome/page_WorkerIdentity.dart';
 import 'widget/page/page_HomePage.dart';
 
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
           '/welcome/teamCompanyIdentity' : (context) => TeamCompanyIdentity(),
           '/welcome/investorManagerIdentity' : (context) => InvestorManagerIdentity(),
           '/welcome/investorCompanyIdentity' : (context) => InvestorCompanyIdentity(),
+          '/lobby/lobbyTeamOverview' : (context) => LobbyTeamOverview(),
         });
   }
 }

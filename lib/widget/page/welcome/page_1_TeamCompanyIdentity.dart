@@ -76,7 +76,9 @@ class TeamCompanyIdentity extends StatelessWidget{
                     ],
                   ),
                 ),
-                ElevatedButton(onPressed: (){},style: Constants.mainButtonStyleB, child: const Text("下一步"),)
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, "/lobby/lobbyTeamOverview");
+                },style: Constants.mainButtonStyleB, child: const Text("下一步"),)
               ],
             ),
           ),
