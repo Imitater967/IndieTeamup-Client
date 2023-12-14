@@ -22,7 +22,13 @@ class _LobbyRecruitContentItemState extends State<LobbyRecruitContentItem> {
             child: Row(
               children: [
                 Column(
-                  children: [Image.asset("assets/art/avatar/bg_resume_avatar.png"),
+                  children: [
+                    Stack(
+                      alignment: Alignment.topRight,
+                      children: [
+                      Image.asset("assets/art/avatar/bg_resume_avatar.png"),
+                      Align(alignment: Alignment.topRight,child: Container( color: Colors.black54,child: Text("男",style: TextStyle(color: Colors.white),))),
+                    ],),
                   Container(
                     margin: EdgeInsets.fromLTRB(0, 10, 0, 20),
                     width: 40,
@@ -30,6 +36,32 @@ class _LobbyRecruitContentItemState extends State<LobbyRecruitContentItem> {
                     ),
                     child: Center(child: Text("7-9k")),
                   )],
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text("杨洋🐏"),
+                          Spacer(),
+                          ElevatedButton(onPressed: (){}, child: Text("搜藏")),
+                          SizedBox(width: 10,)
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text("23岁"),
+                          SizedBox(width: 10,),
+                          Text("1年5月"),
+                          SizedBox(width: 10,),
+                          Text("本科"),
+                          SizedBox(width: 10,),
+                          Text("离职-随时到港"),
+                          SizedBox(width: 10,),
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
