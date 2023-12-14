@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_sub_tabbar.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_team_bottom_navigation_bar.dart';
 
 class LobbyTeamOverview extends StatefulWidget {
   @override
@@ -27,8 +28,6 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       body: Column(
         children: [
@@ -62,9 +61,11 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
                   ),
                 ),
                 Spacer(),
-                ElevatedButton(onPressed: (){}, child: Text("添加")),
-                SizedBox(width: 10,),
-                ElevatedButton(onPressed: (){}, child: Text("搜索"))
+                ElevatedButton(onPressed: () {}, child: Text("添加")),
+                SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(onPressed: () {}, child: Text("搜索"))
               ],
             ),
           ),
@@ -79,6 +80,7 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
           ))
         ],
       ),
+      bottomNavigationBar: TeamBottomNavigationBar(1),
     );
   }
 }
