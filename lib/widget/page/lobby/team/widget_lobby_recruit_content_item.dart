@@ -43,6 +43,7 @@ class _LobbyRecruitContentItemState extends State<LobbyRecruitContentItem> {
                       Row(
                         children: [
                           Text("杨洋🐏"),
+                          Image.asset("assets/art/avatar/icon_resume_identification_lv0.png"),
                           Spacer(),
                           ElevatedButton(onPressed: (){}, child: Text("搜藏")),
                           SizedBox(width: 10,)
@@ -59,6 +60,12 @@ class _LobbyRecruitContentItemState extends State<LobbyRecruitContentItem> {
                           Text("离职-随时到港"),
                           SizedBox(width: 10,),
                         ],
+                      ),
+                      Row(
+                        children: [Text("求职期望"),SizedBox(width: 10,),Text("厦门-程序员")],
+                      ),
+                      Row(
+                        children: [Text("曾任职"),SizedBox(width: 10,),Text("腾X科X-程序员")],
                       )
                     ],
                   ),
