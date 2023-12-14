@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_content.dart';
 
 class LobbySubTabBar extends StatefulWidget {
   @override
@@ -45,7 +46,7 @@ class _LobbySubTabBarState extends State<LobbySubTabBar>
         labelColor: Colors.white,
         unselectedLabelColor: Colors.black,
       ),
-      Expanded(child: TabBarView(controller: _subController,children: [Text("data"),Text("data"),Text("data")],)),
+      Expanded(child: TabBarView(controller: _subController,children: [LobbyContent(),LobbyContent(),LobbyContent()],)),
 
       ]
     );
