@@ -37,21 +37,33 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
             decoration: const BoxDecoration(
               color: Colors.grey,
             ),
-            child: TabBar(
-              controller: _parentController,
-              labelColor: Colors.black,
-              labelStyle: TextStyle(fontWeight: FontWeight.bold),
-              unselectedLabelColor: Colors.black45,
-              tabs: const [
-                Tab(
-                  text: "风险投资",
+            child: Row(
+              children: [
+                Container(
+                  height: 200,
+                  width: 300,
+                  child: TabBar(
+                    controller: _parentController,
+                    labelColor: Colors.black,
+                    labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                    unselectedLabelColor: Colors.black45,
+                    tabs: const [
+                      Tab(
+                        text: "风险投资",
+                      ),
+                      Tab(
+                        text: "股权投资",
+                      ),
+                      Tab(
+                        text: "债券投资",
+                      )
+                    ],
+                  ),
                 ),
-                Tab(
-                  text: "股权投资",
-                ),
-                Tab(
-                  text: "债券投资",
-                )
+                Spacer(),
+                ElevatedButton(onPressed: (){}, child: Text("添加")),
+                SizedBox(width: 20,),
+                ElevatedButton(onPressed: (){}, child: Text("搜索"))
               ],
             ),
           ),

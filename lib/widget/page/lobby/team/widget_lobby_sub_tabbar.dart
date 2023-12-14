@@ -30,22 +30,32 @@ class _LobbySubTabBarState extends State<LobbySubTabBar>
     return Column(
       children: [Container(
         color: Colors.grey,
-        child: TabBar(
-          controller: _subController,
-          tabs: [
-            Tab(
-              text: "推荐",
+        child: Row(
+          children: [
+            Container(
+              height: 100,
+              width: 200,
+              child: TabBar(
+                controller: _subController,
+                tabs: [
+                  Tab(
+                    text: "推荐",
+                  ),
+                  Tab(
+                    text: "附近",
+                  ),
+                  Tab(
+                    text: "最新",
+                  ),
+                ],
+                labelColor: Colors.black,
+                labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                unselectedLabelColor: Colors.black45,
+              ),
             ),
-            Tab(
-              text: "附近",
-            ),
-            Tab(
-              text: "最新",
-            ),
+            Spacer(),
+            ElevatedButton(onPressed: (){}, child: Text("切换\n视图")),
           ],
-          labelColor: Colors.black,
-          labelStyle: TextStyle(fontWeight: FontWeight.bold),
-          unselectedLabelColor: Colors.black45,
         ),
       ),
       Expanded(child: TabBarView(controller: _subController,children: [LobbyContent(),LobbyContent(),LobbyContent()],)),

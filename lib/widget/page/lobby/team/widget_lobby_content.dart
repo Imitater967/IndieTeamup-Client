@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../Constants.dart';
 
@@ -37,7 +38,7 @@ class _LobbyContentItemState extends State<_LobbyContentItem>{
       width: double.infinity,
       height: 130,
       margin: EdgeInsets.fromLTRB(12, 12, 12, 0),
-      color: Constants.mainColor,
+      color: Colors.black12,
     );
   }
 }
