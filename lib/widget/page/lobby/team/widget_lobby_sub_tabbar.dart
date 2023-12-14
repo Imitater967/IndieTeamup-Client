@@ -3,16 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_content.dart';
 
 class LobbySubTabBar extends StatefulWidget {
+
+  List<Widget> children = <Widget>[];
+  LobbySubTabBar(List<Widget> children){
+    this.children=children;
+  }
+
   @override
   State<StatefulWidget> createState() {
-    return _LobbySubTabBarState();
+    return _LobbySubTabBarState(children);
   }
 }
 
 class _LobbySubTabBarState extends State<LobbySubTabBar>
     with SingleTickerProviderStateMixin {
   late TabController _subController;
-
+  List<Widget> children = <Widget>[];
+  _LobbySubTabBarState(List<Widget> children){
+    this.children=children;
+  }
   @override
   void initState() {
     super.initState();
@@ -58,7 +67,7 @@ class _LobbySubTabBarState extends State<LobbySubTabBar>
           ],
         ),
       ),
-      Expanded(child: TabBarView(controller: _subController,children: [LobbyContent(),LobbyContent(),LobbyContent()],)),
+      Expanded(child: TabBarView(controller: _subController,children: children,)),
 
       ]
     );

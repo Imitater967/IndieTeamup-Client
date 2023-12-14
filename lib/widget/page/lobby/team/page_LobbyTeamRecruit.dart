@@ -1,16 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_content.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_invest_content_item.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_recruit_content_item.dart';
 import 'package:indie_team_up/widget/page/lobby/team/widget_lobby_sub_tabbar.dart';
 import 'package:indie_team_up/widget/page/lobby/team/widget_team_bottom_navigation_bar.dart';
 
-class LobbyTeamOverview extends StatefulWidget {
+class LobbyTeamRecruit extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _LobbyTeamOverviewState();
+    return _LobbyTeamRecruitState();
   }
 }
 
-class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
+class _LobbyTeamRecruitState extends State<LobbyTeamRecruit>
     with SingleTickerProviderStateMixin {
   late TabController _parentController;
 
@@ -49,14 +52,14 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
                     labelPadding: EdgeInsets.symmetric(horizontal: 1),
                     tabs: const [
                       Tab(
-                        text: "风险投资",
+                        text: "策划",
                       ),
                       Tab(
-                        text: "股权投资",
+                        text: "项目管理",
                       ),
                       Tab(
-                        text: "债券投资",
-                      )
+                        text: "程序员",
+                      ),
                     ],
                   ),
                 ),
@@ -73,14 +76,34 @@ class _LobbyTeamOverviewState extends State<LobbyTeamOverview>
               child: TabBarView(
             controller: _parentController,
             children: [
-              LobbySubTabBar(),
-              LobbySubTabBar(),
-              LobbySubTabBar(),
-            ],
+              LobbySubTabBar([
+                LobbyContent([LobbyRecruitContentItem()]),
+
+                LobbyContent([]),
+
+                LobbyContent([]),
+
+              ]),
+              LobbySubTabBar([
+                LobbyContent([]),
+
+                LobbyContent([]),
+
+                LobbyContent([]),
+
+              ]),
+              LobbySubTabBar([
+                LobbyContent([]),
+
+                LobbyContent([]),
+
+                LobbyContent([]),
+
+              ]),],
           ))
         ],
       ),
-      bottomNavigationBar: TeamBottomNavigationBar(1),
+      bottomNavigationBar: TeamBottomNavigationBar(0),
     );
   }
 }

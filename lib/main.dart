@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:indie_team_up/widget/page/lobby/team/page_LobbyTeamOverview.dart';
+import 'package:indie_team_up/widget/page/lobby/team/page_LobbyTeamInvest.dart';
+import 'package:indie_team_up/widget/page/lobby/team/page_LobbyTeamRecruit.dart';
 import 'package:indie_team_up/widget/page/login/page_EnterCode.dart';
 import 'package:indie_team_up/widget/page/login/page_LoginByCode.dart';
 import 'package:indie_team_up/widget/page/login/page_LoginByPwd.dart';
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
           '/welcome/teamCompanyIdentity' : (context) => TeamCompanyIdentity(),
           '/welcome/investorManagerIdentity' : (context) => InvestorManagerIdentity(),
           '/welcome/investorCompanyIdentity' : (context) => InvestorCompanyIdentity(),
-          '/lobby/lobbyTeamOverview' : (context) => LobbyTeamOverview(),
+          '/lobby/lobbyTeamInvest' : (context) => LobbyTeamInvest(),
+          '/lobby/lobbyTeamRecruit' : (context) => LobbyTeamRecruit(),
         });
   }
 }

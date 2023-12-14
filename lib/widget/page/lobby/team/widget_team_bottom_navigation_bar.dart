@@ -23,8 +23,18 @@ class _TeamBottomNavigationBarState extends State<TeamBottomNavigationBar>{
       showUnselectedLabels: true,
       unselectedLabelStyle: TextStyle(color: Colors.black45,fontWeight: FontWeight.normal),
       selectedLabelStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+      onTap: (intVar){
+        switch(intVar){
+          case 0:
+            Navigator.pushNamed(context, "/lobby/lobbyTeamRecruit");
+            break;
+          case 1:
+            Navigator.pushNamed(context, "/lobby/lobbyTeamInvest");
+            break;
+        }
+      },
       items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.add_a_photo), label: ('招聘')),
+        BottomNavigationBarItem(icon: Icon(Icons.add_a_photo), label: ('招聘'),),
         BottomNavigationBarItem(
             icon: Icon(Icons.center_focus_strong), label: ('融资')),
         BottomNavigationBarItem(
