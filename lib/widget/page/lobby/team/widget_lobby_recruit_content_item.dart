@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:indie_team_up/widget/page/lobby/team/widget_skill.dart';
 
 class LobbyRecruitContentItem extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 200,
+      height: 400,
       margin: EdgeInsets.fromLTRB(12, 12, 12, 0),
       color: Colors.black12,
       child: Column(
@@ -31,7 +32,8 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
                             alignment: Alignment.topRight,
                             child: Container(
                                 color: Colors.black54,
-                                child: Image.asset("assets/art/avatar/icon_resume_identification_lv0.png"))),
+                                child: Image.asset(
+                                    "assets/art/avatar/icon_resume_identification_lv0.png"))),
                       ],
                     ),
                     Row(
@@ -77,8 +79,10 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
                             overlayColor: Colors.white10,
                             direction: SpeedDialDirection.down,
                             children: [
-                              SpeedDialChild(child: Text("加关注"), shape: const Border()),
-                              SpeedDialChild(child: Text("举报"), shape: const Border()),
+                              SpeedDialChild(
+                                  child: Text("加关注"), shape: const Border()),
+                              SpeedDialChild(
+                                  child: Text("举报"), shape: const Border()),
                             ],
                           ),
                         ],
@@ -108,11 +112,23 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
                           ),
                         ],
                       ),
-                      Container(color: Colors.black,width: double.maxFinite,height: 2,),
+                      Container(
+                        color: Colors.black,
+                        width: double.maxFinite,
+                        height: 2,
+                      ),
                       const Column(
                         children: [
                           Row(
-                            children: [Text("技能")],
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text("技能"),
+                                ],
+                              ),
+                              SkillArraySimple(),
+                            ],
                           ),
                           Row(
                             children: [Text("职能")],
