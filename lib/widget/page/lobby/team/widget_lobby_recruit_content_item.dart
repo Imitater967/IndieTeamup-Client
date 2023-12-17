@@ -117,17 +117,16 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
                         width: double.maxFinite,
                         height: 2,
                       ),
-                       Column(
+                        Column(
                         children: [
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text("技能"),
-                                ],
-                              ),
-                              SkillArraySimple(),
+                              Container(
+                                  margin: EdgeInsets.all(5),
+                                  child: Text("技能")),
+                              Container(child:
+                              SkillArraySimple(),)
                             ],
                           ),
                           Row(
