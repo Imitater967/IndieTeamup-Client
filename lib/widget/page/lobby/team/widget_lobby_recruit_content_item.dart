@@ -117,7 +117,7 @@ class _LobbyRecruitContentItemStateV2 extends State<LobbyRecruitContentItem> {
                         width: double.maxFinite,
                         height: 2,
                       ),
-                      const Column(
+                       Column(
                         children: [
                           Row(
                             children: [
